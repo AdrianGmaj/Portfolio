@@ -3,14 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { HomeModule } from './home/home.module';
+import { CommonModule } from '@angular/common';
+import { AppRoutingModule } from './app-routing-module';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
-      ToolbarComponent
-   ],
+    ToolbarComponent
+  ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HomeModule,
+    CommonModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
