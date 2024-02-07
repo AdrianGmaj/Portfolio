@@ -105,7 +105,9 @@
 
         h1 {
             font-size: calc(3rem + 4vw);
-            color: white;
+            color:rgba(0, 0, 0, 0.09);
+            background-color: transparent;
+            text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #f0eded, 1px 1px 0 #ffffff;
         
 
        
