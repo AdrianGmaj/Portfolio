@@ -7,8 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-
-  constructor( private router:Router) { }
+  sideOpen = false;
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -26,5 +26,14 @@ export class ToolbarComponent implements OnInit {
 
       element.classList.add('scrolled');
     }
+  }
+
+  openSide(){
+if(this.sideOpen == false){
+  this.sideOpen = true;
+}else{
+  this.sideOpen = false
+}
+
   }
 }

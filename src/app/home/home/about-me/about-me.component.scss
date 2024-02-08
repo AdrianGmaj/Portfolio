@@ -1,5 +1,5 @@
 .about-me {
-    min-height: 100vh;
+    min-height: fit-content;
     height: fit-content;
     background-color: #181716;
     //  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);;
@@ -67,6 +67,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
 
         gap: 2vh;
         max-width: 100rem;
@@ -78,6 +79,9 @@
             max-width: 450px;
             object-fit: cover;
             object-position: center;
+         
+         
+      
         }
 
         &-text {
@@ -167,3 +171,4 @@
         }
     }
 }
+@media screen and (max-width: 800px) {}

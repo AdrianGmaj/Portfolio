@@ -72,7 +72,7 @@
     }
   
     100% {
-      transform: translateX(80%);
+      transform: translateX(-50%);
       left:20;
       opacity: 100%;
       display: block;
@@ -80,6 +80,8 @@
     }
 
   }
+
+
     &_content {
         position: absolute;
         animation: hello 2s ease-in-out 3s;
@@ -137,4 +139,44 @@
             50% { border-right-color: #01a299 }
           }
     }
+}
+
+@media screen and (max-width: 800px) {
+  .showcase{
+    .a {
+      font-size: 45vw;
+    }
+    .g {
+      font-size: 45vw;
+    }
+  }
+
+.showcase_content{
+  animation: hello2 2s ease-in-out 3s;
+  animation-fill-mode:both;
+
+
+  
+}
+
+
+@keyframes hello2 {
+  0% {
+    transform: translateX(0);
+    opacity: 0%;
+    display: none;    bottom: 50%;
+    
+
+  }
+
+  100% {
+    transform: translateX(-5%);
+    left:20;
+    opacity: 100%;
+    display: block;
+    bottom: 20%;
+
+  }
+
+}
 }
