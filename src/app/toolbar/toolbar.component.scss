@@ -7,11 +7,20 @@
     position: fixed;
     height: 56px;
     width: 100%;
-    background-color: #212121;
+    background-color: transparent;
     color: white;
     padding-left: 4vw;
     padding-right: 4vw;
+    z-index: 999;
+
+
+    &.scrolled {
+        background-color: #101311;
+        transition: all 0.5s ease-in-out;
+    }
+
     &_container {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -21,36 +30,160 @@
         margin: 0 auto;
         padding: 0 0.5em;
         padding: 1rem;
-    }
-    .a {  font-family: "Protest Strike", sans-serif;
-        font-size: 2.5rem;
-        font-weight: 400;
+
     }
 
-    .g {
-        font-family: "Protest Strike", sans-serif;
-        font-size: 2.5rem;
-        font-weight: 400;
-        color:
-            #01a299;
+    .logo {
+        position: absolute;
+
+        .a {
+            font-family: "Protest Strike", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            border-bottom: #01a299 1px solid;
+        }
+
+        .g {
+            font-family: "Protest Strike", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            color:
+                #01a299;
+            border-top: white 1px solid;
+        }
+    }
+
+    #hamburger {
+        visibility: hidden;
     }
 
     &_links {
         display: flex;
         flex-direction: row;
+        position: absolute;
+        right: 0;
         gap: 3vw;
 
         text-transform: uppercase;
         list-style: none;
         font-size: 0.8rem;
         letter-spacing: 0.2rem;
-        font-weight: 500;
-        justify-content: space-evenly;
-        cursor: pointer;
+        font-weight: 700;
         justify-self: center;
+        cursor: pointer;
+        align-self: center;
         margin-right: rem;
+        transition: all 0.2s ease-in;
+
 
 
 
     }
+
+    &_side {
+        transition: all 0.5s ease-in-out;
+       position: fixed;
+        width: 100%;
+        height: 60vh;
+        top: -100vh;
+        left: 0;
+        background-color: #101311;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+   
+        color: white;
+        z-index: 99;
+
+        &.active {
+            top: 0;
+           
+        }
+ul{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    gap: 2rem;
+    li{
+        cursor: pointer;
+    }
+}
+        .bar{
+            width: 40%;
+            height: 2px;
+            background-color:  #01a299;
+            bottom: 20%;
+            justify-self: flex-end;
+        }
+
+    }
+
+    .nav_link {
+        position: relative;
+        transition: all 0.5s ease-in-out;
+        overflow: hidden;
+        padding-bottom: 1vh;
+
+
+
+    }
+
+    .nav_link:before {
+        display: block;
+        content: "";
+
+        border-bottom: 3px solid #01a299;
+        ;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        bottom: 0;
+        left: -2;
+        position: absolute;
+        width: 100%;
+        transition: transform .3s ease-in-out;
+    }
+
+    .nav_link:hover:before {
+        transform: scaleX(1);
+        transform-origin: 0 50%;
+        transition-delay: .3s;
+    }
+
+}
+
+@keyframes border1 {
+    0% {
+        left: -100%
+    }
+
+    100% {
+        left: 100%
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav_links {
+        transform: translateY(-200vh);
+
+    }
+
+
+    .logo {
+        right: 0;
+    }
+
+    .nav {
+        #hamburger {
+            visibility: visible;
+            cursor: pointer;
+        }
+     
+    }
+
 }

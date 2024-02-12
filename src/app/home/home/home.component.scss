@@ -1,0 +1,21 @@
+.home {
+    display: grid;
+    grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
+
+    app-showcase {
+        grid-column: container-start/container-end;
+        width: 100%;
+    }
+    app-about-me {
+        grid-column: container-start/container-end;
+        width: 100%;
+    }
+    app-portfolio {
+        grid-column: container-start/container-end;
+        width: 100%;
+    }
+    app-contact {
+        grid-column: center-start/center-end;
+        width: 100%;
+    }
+}

@@ -1,15 +1,51 @@
 <nav class="nav">
   <div class="nav_container">
-    <span>
+    <span class="logo">
       <b class="a">A</b>
       <b class="g">G</b>
     </span>
 
+    <i (click)="openSide()" id="hamburger" class="fa-solid fa-bars" style="color: #01a299; font-size: 1.3rem;"></i>
+
+
+
     <ul class="nav_links">
-      <li>home</li>
-      <li>about</li>
-      <li>portfolio</li>
-      <li>contact</li>
+      <li class="nav_link" routerLink="" fragment="showcase">home
+        <span></span>
+      </li>
+      <li class="nav_link" routerLink="" fragment="about">about
+          <span></span>
+      </li>
+      <li class="nav_link" routerLink="" fragment="portfolio">portfolio
+        <span></span>
+      </li>
+      <li class="nav_link">contact
+
+        <span></span>
+      </li>
     </ul>
   </div>
 </nav>
+<!-- sidebar -->
+<div [class.active]="sideOpen" class="nav_side active">
+  <ul >
+    <li class="nav_side-link" routerLink="" fragment="showcase"> home
+      <span></span>
+    </li>
+    <li class="nav_side-link" routerLink="" fragment="about">about
+        <span></span>
+    </li>
+    <li class="nav_side-link" routerLink="" fragment="portfolio">portfolio
+      <span></span>
+    </li>
+    <li class="nav_side-link">contact
+  
+      <span></span>
+    </li>
+  </ul>
+
+
+  <span class="bar"></span>
+  </div>
+  
+  <!--  -->
