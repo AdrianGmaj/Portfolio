@@ -1,12 +1,15 @@
-.contact{
+.contact {
     min-height: 50vh;
-    background-color: #101311;
+    background-color: #111111;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10vh;
     padding: 8vh 0 8vh 0;
+    a{
+        text-decoration: none;
+    }
 
     h3 {
         font-family: "Protest Strike", sans-serif;
@@ -19,14 +22,15 @@
         overflow: hidden;
         padding: 2vh;
         letter-spacing: 7px;
-      
-            span{
-                color: #101311;;
-                background-color: #101311;
-                text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #f0eded, 1px 1px 0 #ffffff;
-            }
-        
-    
+
+        span {
+            color: #101311;
+            ;
+            background-color: #101311;
+            text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #f0eded, 1px 1px 0 #ffffff;
+        }
+
+
     }
 
     h3::after {
@@ -35,17 +39,17 @@
         content: "";
         background-color: #01a299;
         height: 3px;
-      
+
         transform-origin: 0 50%;
         bottom: 0;
         left: -2;
         position: absolute;
         width: 100%;
-     
+
         animation: headerBorderBottom 2s ease-in-out;
         animation-iteration-count: infinite;
-       
-        
+
+
     }
 
     @keyframes headerBorderBottom {
@@ -59,19 +63,20 @@
     }
 
 
-    &_content{
+    &_content {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 2vh;
-       width: 50%;
+        gap: 5vh;
+        width: 50%;
+
         .btn {
             width: 300px;
-            height: 100px;
+            height: 200px;
             border: 3px solid #01a299;
-            font-family: 'Cinzel', serif;
-            font-size: 20px;
+
+
             cursor: pointer;
             -webkit-tap-highlight-color: transparent;
             display: flex;
@@ -81,47 +86,64 @@
             z-index: 0;
             transition: 1s;
             color: white;
-          }
-          
-          .btn::before, .btn::after {
+
+            i {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+                font-size: 2rem;
+
+                p {
+                    font-family: "Protest Strike", sans-serif;
+                    font-size: 0.8rem;
+                    color: #9f9f9f;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        .btn::before,
+        .btn::after {
             position: absolute;
             background: #101311;
             z-index: -1;
             transition: 1s;
             content: '';
-          }
-          
-          .btn::before {
+        }
+
+        .btn::before {
             width: 270px;
             // - 20
-            height: 100px;
+            height: 200px;
             // tele samo
-     
-          }
-          
-          .btn::after {
+
+        }
+
+        .btn::after {
             width: 300px;
             // tele samo
-        
-            height: 60px;
+
+            height: 150px;
             //  - 20
-           
-          }
-          
-        
-          
-          .btn:hover::before {
+
+        }
+
+
+
+        .btn:hover::before {
             width: 0px;
             background-color: #1013116b;
 
-          }
-          
-          .btn:hover::after {
+        }
+
+        .btn:hover::after {
             height: 0px;
             background-color: #1013116b;
 
-          }
-          
-        
+        }
+
+
     }
 }

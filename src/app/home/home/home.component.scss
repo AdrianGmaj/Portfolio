@@ -1,4 +1,5 @@
 .home {
+    background-color: #111111;
     display: grid;
     grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
 
