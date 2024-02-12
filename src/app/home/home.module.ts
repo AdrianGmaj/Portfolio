@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ShowcaseComponent } from './home/showcase/showcase.component';
 import { AboutMeComponent } from './home/about-me/about-me.component';
 import { PortfolioComponent } from './home/portfolio/portfolio.component';
+import { ContactComponent } from './home/contact/contact.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { PortfolioComponent } from './home/portfolio/portfolio.component';
     HomeComponent,
     ShowcaseComponent,
     AboutMeComponent,
-    PortfolioComponent],
+    PortfolioComponent,
+  ContactComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
