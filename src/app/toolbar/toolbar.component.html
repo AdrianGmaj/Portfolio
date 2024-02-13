@@ -29,16 +29,16 @@
 <!-- sidebar -->
 <div [class.active]="sideOpen" class="nav_side active">
   <ul >
-    <li class="nav_side-link" routerLink="" fragment="showcase"> home
+    <li (click)="openSide()" class="nav_side-link" routerLink="" fragment="showcase"> home
       <span></span>
     </li>
-    <li class="nav_side-link" routerLink="" fragment="about">about
+    <li (click)="openSide()" class="nav_side-link" routerLink="" fragment="about">about
         <span></span>
     </li>
-    <li class="nav_side-link" routerLink="" fragment="portfolio">portfolio
+    <li (click)="openSide()" class="nav_side-link" routerLink="" fragment="portfolio">portfolio
       <span></span>
     </li>
-    <li class="nav_side-link" routerLink="" fragment="contact">contact
+    <li (click)="openSide()" class="nav_side-link" routerLink="" fragment="contact">contact
   
       <span></span>
     </li>
