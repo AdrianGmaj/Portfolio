@@ -6,12 +6,14 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { HomeModule } from './home/home.module';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing-module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
-    ToolbarComponent
-  ],
+    ToolbarComponent,
+      FooterComponent
+   ],
   imports: [
     BrowserModule,
     HomeModule,
