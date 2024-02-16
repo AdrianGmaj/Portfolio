@@ -160,7 +160,7 @@
         }
         &_card:hover .shadow h4 i{
             opacity: 0%;
-            top:100%;
+            transform: translateY(-100%);
         }
         &_card:hover .tech{
          color: white;
