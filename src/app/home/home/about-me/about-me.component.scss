@@ -95,10 +95,11 @@
             display: flex;
             flex-direction: column;
             position: relative;
-            gap: 2vh;
-            width: 50%;
+            gap: 1.2rem;
+            width: 45%;
             max-width: 550px;
-            height: 500px;
+            height: fit-content;
+            min-height: 500px;
 
 
             .header1 {
@@ -119,10 +120,10 @@
                 color: grey;
                 border-bottom: 1px solid #9f9f9f;
                 line-height: 1.7;
-                padding-bottom: 1rem;
+            
                 text-align: justify;
                 text-justify: inter-word;
-                padding: 2vh 0 2vw 0;
+                padding: 1rem 0 4rem 0;
 
             }
 
@@ -148,16 +149,12 @@
             }
 
             .cv {
-                position: absolute;
                 width: 100%;
-                bottom: 0%;
-
                 display: flex;
+                flex-direction: row;
                 justify-content: space-between;
 
-
-
-                align-items: center;
+                align-items: flex-end;
                 flex-wrap: wrap;
 
                 button {
@@ -194,7 +191,11 @@
 }
 
 @media screen and (max-width: 800px) {
+     .about-me_container{
+        padding: 4vh 4vw;;
+    }
     .about-me_container-img {
+        width: 70%;
         border: 3px solid #01a299;
 
         img {
@@ -210,6 +211,7 @@
     .about-me_container-text {
         height: min-content;
         padding: 0;
+        width: 70%;
 
         .cv {
 
